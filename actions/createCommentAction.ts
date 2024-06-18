@@ -16,7 +16,7 @@ export const createCommentAction = async (formData: FormData): Promise<Redirect>
     const data: IComments = { comment_id, avatar, email, username, content }
 
     //! Memeriksa komen terahir terlebih dahulu
-    const getComment = await supabase.from('diaries').select('comments').eq('id', diary_id).single()
+    const getComment = await supabase.from('diary').select('comments').eq('id', diary_id).single()
 
     const existingComment: Array<IComments> = getComment.data?.comments || []
 

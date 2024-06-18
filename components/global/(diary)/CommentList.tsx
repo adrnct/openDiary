@@ -15,9 +15,9 @@ const CommentList = async ({ diary_id }: ParamsProps) => {
     return (
         <div className='flex flex-col gap-4'>
             <div className='divider'></div>
-            {data.comments.map((comment: IComments) => {
+            {data.comments.map((comment: IComments, index: number) => {
                 return (
-                    <div className='ml-4 card card-body card-bordered p-4 bg-base-200'>
+                    <div key={index} className='ml-4 card card-body card-bordered p-4 bg-base-200'>
                         <Image src={comment.avatar as string} alt={comment.avatar as string} width={50} height={50} className='rounded-full bg-primary' />
                         <p>{comment.content}</p>
                         <p>{comment.username || comment.email}</p>
