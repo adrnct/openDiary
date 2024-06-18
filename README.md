@@ -1,5 +1,8 @@
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
+### Links
+- Live Site URL: [https://open-diary-zeta.vercel.app/](https://open-diary-zeta.vercel.app/)
+
 ## Getting Started
 
 First, run the development server:
