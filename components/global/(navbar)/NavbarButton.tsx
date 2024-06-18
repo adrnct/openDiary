@@ -1,12 +1,13 @@
 'use client'
 import React from 'react'
-import { useUser } from '@clerk/nextjs'
 import Link from 'next/link'
+import { useUser } from '@clerk/nextjs'
 import { UserButton } from '@clerk/nextjs'
 
 const NavbarButton = (): React.ReactElement => {
     const { isLoaded, isSignedIn } = useUser()
     if (!isLoaded) return <p>please wait...</p>
+
     return isSignedIn ? (
         <div className='flex items-center gap-4'>
             <Link href='/dashboard'>Create Diary</Link>
